@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+        
+        </style>
+
+    </head>
+
+    <body>
+        <button onclick="disp()" onmousemove="func1()" onmouseout="func2()">Click On Me!</button>
+        
+        <p id="demo"></p>
+
+        <script>
+            function func1(){
+                document.getElementById('demo').innerHTML="You have moved the mouse on the button";
+            }
+        
+            function func2(){
+                document.getElementById('demo').innerHTML="";
+            }
+
+            function disp(){
+                alert("Hello!")
+            }
+        </script>
+       
+    </body>
+
+
+</html>
