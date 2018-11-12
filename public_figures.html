@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+        <script>
+                function loadData(element){
+                    var xmlhttp;
+                    if(window.XMLHttpRequest){
+                        xmlhttp= new XMLHttpRequest();
+                    }
+                    
+                    xmlhttp.onreadystatechange=function(){
+                        if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                        document.getElementById("mymodalBody").innerHTML=xmlhttp.responseText;
+                        }
+                    }
+
+                switch(element.id){
+                
+
+                    case "img1": xmlhttp.open("GET","descriptions/muhammed_ali.html",true);
+                        break;
+
+                    case "img2": xmlhttp.open("GET","descriptions/hillary_clinton.html",true);
+                        break;
+
+                    case "img3": xmlhttp.open("GET","descriptions/michelle_obama.html",true);
+                        break;
+
+                    case "img4": xmlhttp.open("GET","descriptions/obama.html",true);
+                        break;
+                        
+                    case "img5": xmlhttp.open("GET","descriptions/oprah.html",true);
+                        break;
+
+                    case "img6": xmlhttp.open("GET","descriptions/will_smith.html",true);
+                        break;
+                }
+
+                xmlhttp.send();
+            }
+        </script>
+    </head>
+    <br/>
+    <h1 align="center">Famous Public Figures</h1>
+    <br/><br/>
+
+    <body background="images/background.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a data-toggle="modal" href="#myModal"><img id="img1" onclick="loadData(this)" src="images/ali.jpg"/></a>
+                </div>
+
+                <div class="col-md-4">
+                    <a data-toggle="modal" href="#myModal"><img id="img2" onclick="loadData(this)" src="images/hillary_clinton.jpg"/></a>
+                </div>
+
+                <div class="col-md-4">
+                    <a data-toggle="modal" href="#myModal"><img id="img3" onclick="loadData(this)" src="images/michelle_obama.jpg"/></a>
+                </div>
+            </div>
+
+            <br/><br/><br/>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <a data-toggle="modal" href="#myModal"><img id="img4" onclick="loadData(this)" src="images/obama.jpg"/></a>
+                </div>
+
+                <div class="col-md-4">
+                    <a data-toggle="modal" href="#myModal"><img id="img5" onclick="loadData(this)" src="images/oprah.jpg"/></a>
+                </div>
+
+                <div class="col-md-4">
+                    <a data-toggle="modal" href="#myModal"><img id="img6" onclick="loadData(this)" src="images/will_smith.jpg"/></a>
+                </div>
+            </div>
+            <br/><br/>
+        </div>
+
+        <!--Modal Begins-->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" id="mymodalHeader">
+                        <h2 align="center">Famous Public Figures</h2>
+                    </div>
+
+                    <div class="modal-body" id="mymodalBody">
+
+                    </div>
+
+                    <div class="modal-footer" id="mymodalFooter">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Got It!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal Ends-->
+    </body>
+</html>
