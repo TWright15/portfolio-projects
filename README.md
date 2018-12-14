@@ -7,3 +7,6 @@ I have provided various projects that I have created using the coding skills tha
 ~Bootstrap
 ~Google API
 ~jQuery
+
+
+In addition, I have included the code in which I used to create my portfolio. 
